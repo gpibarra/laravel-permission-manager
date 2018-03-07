@@ -1,0 +1,43 @@
+{
+    "name": "gpibarra/laravel-permission-manager",
+    "type": "library",
+    "description": "Laravel Permission Manager",
+    "keywords": [
+        "laravel","RBAC","Permission"
+    ],
+    "homepage": "https://github.com/gpibarra/laravel-permission-manager",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gerardo Ibarra",
+            "email": "ibarragp@gmail.com"
+        }
+    ],
+    "require": {
+        "laravel/framework": "^5.5",
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0",
+        "laracasts/generators": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "gpibarra\\LaravelPermissionManager\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "gpibarra\\LaravelPermissionManager\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "gpibarra\\LaravelPermissionManager\\LaravelPermissionManagerServiceProvider"
+            ]
+        }
+    }
+}
