@@ -42,7 +42,7 @@ class LaravelPermissionManagerServiceProvider extends ServiceProvider
         //CONFIG
         // use the vendor configuration file as fallback
         $this->mergeConfigFrom(
-            __DIR__.'/config/LaravelPermissionManager.php', 'LaravelPermissionManager'
+            __DIR__.'/config/laravelpermissionmanager.php', 'LaravelPermissionManager'
         );
 
         // publish config file
