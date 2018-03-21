@@ -36,8 +36,8 @@ class LaravelPermissionManagerServiceProvider extends ServiceProvider
         // publish views
         $this->publishes([__DIR__.'/resources/views' => resource_path('views/vendor/gpibarra/LaravelPermissionManager')], 'views');
 
-        // publish public PermissionManager assets
-        $this->publishes([__DIR__.'/public' => public_path('vendor/gpibarra')], 'public');
+//        // publish public PermissionManager assets
+//        $this->publishes([__DIR__.'/public' => public_path('vendor/gpibarra')], 'public');
 
         //CONFIG
         // use the vendor configuration file as fallback
@@ -50,13 +50,13 @@ class LaravelPermissionManagerServiceProvider extends ServiceProvider
 
 
         //Routes
-        $routeFilePath = '/routes/laravelapermissionmanager.php';
+        $routeFilePath = '/routes/laravelpermissionmanager.php';
         // by default, use the routes file provided in vendor
-        $routeFilePathInUse = __DIR__.$this->routeFilePath;
+        $routeFilePathInUse = __DIR__.$routeFilePath;
 
         // but if there's a file with the same name in routes/backpack, use that one
-        if (file_exists(base_path().$this->routeFilePath)) {
-            $routeFilePathInUse = base_path().$this->routeFilePath;
+        if (file_exists(base_path().$routeFilePath)) {
+            $routeFilePathInUse = base_path().$routeFilePath;
         }
 
         $this->loadRoutesFrom($routeFilePathInUse);
